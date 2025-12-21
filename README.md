@@ -33,8 +33,8 @@ saf-pricing-brazil/
 
 ## Dados
 
-- **dados_consolidados.xlsx** — base agregada com séries históricas, projeções e parâmetros setoriais (fontes: ICAO, IATA, EPE, ANP e estudos setoriais, incluindo Bergero, 2022).  
-- **Mutran_jet_datav2.xlsx** — série histórica semanal de preços de etanol e querosene de aviação (2013–2022), utilizada na calibração da volatilidade e do risco (fonte: Watson et al., dataset).
+- **dados_consolidados.xlsx** — base agregada com séries históricas, projeções e parâmetros setoriais (fontes: ICAO, IATA, EPE, ANP,  Bergero (2022) etc.).  
+- **Mutran_jet_datav2.xlsx** — série histórica semanal de preços de etanol e querosene de aviação (2013–2022), utilizada na calibração da volatilidade e do risco (fontes: Watson et al. (2025)).
 
 ---
 

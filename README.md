@@ -9,24 +9,37 @@
 
 ## 📄 Sobre este repositório
 
-Este repositório contém o material suplementar, o código-fonte computacional e os dados utilizados na Monografia de Conclusão de Curso intitulada **"Desafios e perspectivas para a introdução do Combustível Sustentável de Aviação na matriz energética do Brasil: O papel da regulação na formação de preços"**.
+Este repositório armazena o material suplementar, os códigos-fonte e as bases de dados utilizados na Monografia de Conclusão de Curso intitulada **"Desafios e perspectivas para a introdução do Combustível Sustentável de Aviação na matriz energética do Brasil: O papel da regulação na formação de preços"**.
 
-O objetivo do código é realizar uma **Simulação de Monte Carlo** aplicada a um modelo de **Barganha de Nash**, avaliando os preços de equilíbrio ($p^*$) e os prêmios verdes do SAF produzido via rota *Alcohol-to-Jet* (ATJ) sob diferentes cenários regulatórios.
+O projeto computacional divide-se em duas frentes:
+1.  **Modelagem Econômica:** Simulação de Monte Carlo aplicada a um modelo de Barganha de Nash para estimar preços de equilíbrio ($p^*$) e prêmios verdes do SAF (Rota ATJ).
+2.  **Análise Descritiva:** Geração de visualizações de dados sobre o panorama global e nacional da aviação (emissões, demanda, rotas tecnológicas e mercado).
 
 ## 📂 Estrutura de Arquivos
 
-* `R/`: Contém o script principal da simulação (`simulacao_saf_tcc_unicamp_2025.R`).
-* `data/`: Contém a base de dados histórica de preços (`Mutran_jet_datav2.xlsx`).
-* `output/`: Contém as figuras (gráficos) e tabelas geradas pelo modelo.
+A organização do projeto segue o padrão de reprodutibilidade científica:
+
+### `R/` (Scripts de Análise)
+* **`simulacao_saf_tcc_unicamp_2025.R`**: Script principal da monografia. Realiza a calibração de volatilidade, simulação de cenários regulatórios e gera os gráficos de resultados do modelo econômico (Gráficos 17, 18 e 19).
+* **`gerar_graficos_descritivos.R`**: Script responsável por gerar as visualizações do panorama setorial (Gráficos 1 a 15), abordando emissões, metas da ICAO/IATA e evolução da produção de biocombustíveis.
+
+### `data/` (Bases de Dados)
+* **`Mutran_jet_datav2.xlsx`**: Série histórica semanal de preços de Etanol e QAV (2013-2022) utilizada para calibração de risco no modelo econômico (Fonte: Watson et al., 2025).
+* **`dados_consolidados.xlsx`**: Compilação de dados agregados de múltiplas fontes (ICAO, IATA, EPE, ANP, Global Carbon Project) utilizada para a caracterização do setor.
+
+### `output/` (Resultados)
+* **`figures/`**: Contém todas as figuras geradas pelos scripts em formato vetorial (`.svg`) de alta qualidade.
+* **`tables/`**: Contém as tabelas de resultados das simulações (`.csv`).
 
 ## 🚀 Como executar
 
-1.  Baixe este repositório ou clone-o usando Git.
-2.  Abra o arquivo `R/simulacao_saf_tcc_unicamp_2025.R` no **RStudio**.
-3.  Instale as dependências necessárias (o código já verifica e instala o pacote `pacman` e demais bibliotecas).
-4.  Execute o script completo.
-5.  Os resultados serão salvos automaticamente na pasta de trabalho.
+Para reproduzir as análises, siga os passos abaixo:
 
-## ⚖️ Licença
+1.  **Clone ou baixe** este repositório.
+2.  Abra o projeto no **RStudio**.
+3.  Os scripts utilizam o gerenciador de pacotes `pacman`, que instalará automaticamente as dependências necessárias (`tidyverse`, `readxl`, `zoo`, etc.) na primeira execução.
 
-Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes. A utilização destes dados ou código para fins acadêmicos deve ser acompanhada da devida citação à monografia original.
+### Para gerar os resultados do Modelo Econômico:
+Execute o arquivo:
+```r
+source("R/simulacao_saf_tcc_unicamp_2025.R")

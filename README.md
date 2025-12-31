@@ -18,10 +18,10 @@ Este repositório contém os dados e o código empregados na monografia *Desafio
 ```
 saf-pricing-brazil/
 ├── data/
-│   ├── dados_consolidados.xlsx    # dados setoriais (ICAO, IATA, EPE, ANP, Bergero 2022, etc.)
-│   └── Mutran_jet_datav2.xlsx     # séries de preços (etanol e QAV; Watson et al. dataset)
+│   ├── dados_consolidados.xlsx    # dados setoriais (ICAO, IATA, EPE, ANP, Bergero (2022), etc.)
+│   └── Mutran_jet_datav2.xlsx     # séries de preços (etanol e QAV; Watson et al. (2025) dataset)
 ├── R/
-│   ├── gerar_graficos_descritivos.R   # gera os Gráficos 1–16
+│   ├── gerar_graficos_descritivos.R   # gera os Gráficos 1–16 (com exceção do Gráfico 9)
 │   └── simulacao_monte_carlo.R        # gera Gráficos 17–19 e Tabela 9
 ├── output/
 │   ├── figures/                   # gráficos exportados em .svg
@@ -93,4 +93,4 @@ O mercado de SAF é modelado como uma barganha sequencial em estrutura de oligop
 
 ## Licença
 
-Este repositório é disponibilizado sob a licença **Creative Commons Attribution 4.0 International (CC BY 4.0)**.
+Este repositório é disponibilizado sob a licença **MIT**.
